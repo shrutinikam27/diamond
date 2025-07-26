@@ -54,7 +54,7 @@ const HomePage = () => {
               <div className="w-12 h-12 rounded-full bg-gradient-to-r from-orange-400 to-orange-600 flex items-center justify-center shadow-lg">
                 <FaUtensils className="text-white text-xl" />
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">StreetVend</span>
+              <span className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">Vendorverse</span>
             </div>
             <div className="hidden md:flex gap-8">
               {['Features', 'How It Works', 'Dashboard', 'Testimonials'].map((item) => (
@@ -80,69 +80,70 @@ const HomePage = () => {
         </div>
       </header>
 
-      {/* Hero Section - Image on Right, Text on Left */}
-      <section className="relative py-20 md:py-28 overflow-hidden">
-        <div className="absolute top-20 right-10 w-72 h-72 bg-orange-500 rounded-full filter blur-3xl opacity-15 animate-pulse"></div>
-        <div className="absolute bottom-10 left-10 w-96 h-96 bg-green-500 rounded-full filter blur-3xl opacity-15 animate-pulse"></div>
-        
-        <div className="container mx-auto px-4">
-          {/* Desktop: Text Left, Image Right */}
-          <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-16">
-            {/* Text Content - Left Side */}
-            <div className={`w-full md:w-1/2 md:order-1 transition-all duration-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-                Empowering India's{' '}
-                <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
-                  Street Food Vendors
-                </span>
-              </h1>
-              <p className="text-gray-600 text-lg lg:text-xl mb-8 max-w-2xl leading-relaxed">
-                StreetVend connects street food vendors with verified suppliers for seamless raw material sourcing. 
-                Save time, reduce costs, and focus on creating delicious street food!
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 mb-12">
-                <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl font-medium text-lg">
-                  Find Suppliers
-                </button>
-                <button className="px-8 py-4 border-2 border-orange-500 text-orange-500 rounded-lg hover:bg-orange-500 hover:text-white transition-all duration-300 transform hover:scale-105 font-medium text-lg">
-                  Become a Supplier
-                </button>
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
-                <StatItem value="1,250+" label="Vendors Connected" />
-                <StatItem value="420+" label="Verified Suppliers" />
-                <StatItem value="₹85L+" label="Monthly Orders" />
-              </div>
-            </div>
+     <section className="relative py-20 md:py-28 overflow-hidden bg-[#fffdf8]">
+  {/* Background blobs */}
+  <div className="absolute top-20 right-10 w-72 h-72 bg-orange-500 rounded-full filter blur-3xl opacity-15 animate-pulse z-0"></div>
+  <div className="absolute bottom-10 left-10 w-96 h-96 bg-green-500 rounded-full filter blur-3xl opacity-15 animate-pulse z-0"></div>
 
-            {/* Image Content - Right Side */}
-            <div className={`w-full md:w-1/2 md:order-2 flex justify-center transition-all duration-800 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              <div className="relative">
-                <div className="bg-gradient-to-br from-white to-gray-50 rounded-3xl overflow-hidden shadow-2xl w-full max-w-lg border border-gray-100 transform hover:scale-105 transition-all duration-500">
-                  <div className="bg-gradient-to-br from-orange-50 to-orange-100 border-2 border-dashed border-orange-200 rounded-2xl w-full h-80 lg:h-96 flex items-center justify-center m-4">
-                    <div className="text-center p-6">
-                      <div className="text-orange-500 text-4xl mb-4 animate-bounce">
-                        <FaShoppingCart />
-                      </div>
-                      <h3 className="font-bold text-xl mb-2">Vendor Dashboard</h3>
-                      <p className="text-gray-600 leading-relaxed">Manage orders, track deliveries, and find suppliers</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-xl border border-orange-100 transform rotate-3 hover:rotate-0 transition-all duration-300">
-                  <div className="text-sm text-gray-500">Mumbai Vendor</div>
-                  <div className="font-bold text-orange-500 text-lg">Saved ₹12,500/month</div>
-                </div>
-                <div className="absolute -top-6 -left-6 bg-gradient-to-r from-orange-500 to-orange-600 p-4 rounded-full shadow-xl">
-                  <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white animate-pulse">
-                    <FaTruck className="text-xl" />
-                  </div>
-                </div>
-              </div>
+  <div className="container mx-auto px-4 relative z-10">
+    {/* Force side-by-side on medium screens and above */}
+    <div className="flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-20">
+      
+      {/* TEXT LEFT */}
+      <div className="w-full md:w-1/2">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+          Empowering India's{' '}
+          <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+            Street Food Vendors
+          </span>
+        </h1>
+        <p className="text-gray-600 text-lg lg:text-xl mb-8 max-w-2xl leading-relaxed">
+          StreetVend connects street food vendors with verified suppliers for seamless raw material sourcing. 
+          Save time, reduce costs, and focus on creating delicious street food!
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 mb-12">
+          <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg hover:from-orange-600 hover:to-orange-700 transition-all duration-300 transform hover:scale-105 shadow-xl hover:shadow-2xl font-medium text-lg">
+            Find Suppliers
+          </button>
+          <button className="px-8 py-4 border-2 border-orange-500 text-orange-500 rounded-lg hover:bg-orange-500 hover:text-white transition-all duration-300 transform hover:scale-105 font-medium text-lg">
+            Become a Supplier
+          </button>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <StatItem value="1,250+" label="Vendors Connected" />
+          <StatItem value="420+" label="Verified Suppliers" />
+          <StatItem value="₹85L+" label="Monthly Orders" />
+        </div>
+      </div>
+
+      {/* IMAGE RIGHT */}
+      <div className="w-full md:w-1/2 flex justify-center relative">
+        <div className="relative max-w-lg w-full">
+          <img
+            src="https://media.istockphoto.com/id/1329213718/photo/vada-pav.jpg?s=612x612&w=0&k=20&c=Yy3pm53KrPAnZXL9weCJDzXjxa2My34oVFx7RBCPmZ8="
+            alt="Street Food"
+            className="rounded-2xl w-full h-auto shadow-2xl border border-orange-100"
+          />
+
+          {/* Badge Top Left */}
+          <div className="absolute -top-6 -left-6 bg-gradient-to-r from-orange-500 to-orange-600 p-4 rounded-full shadow-xl">
+            <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white animate-pulse">
+              <FaTruck className="text-xl" />
             </div>
           </div>
+
+          {/* Bottom Label */}
+          <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-xl border border-orange-100 transform rotate-3 hover:rotate-0 transition-all duration-300">
+            <div className="text-sm text-gray-500">Mumbai Vendor</div>
+            <div className="font-bold text-orange-500 text-lg">Saved ₹12,500/month</div>
+          </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       {/* Key Features Section - Exactly 3 Features Per Row */}
       <section id="features" className="py-20 md:py-28 bg-white">
